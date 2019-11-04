@@ -1,0 +1,13 @@
+
+<swiper class="swiper" [config]="config">
+  <div class="swiper-wrapper">
+    <img class="swiper-slide" *ngFor="let image of loadImage; let idx = index; " [src]="image.url" (deferLoad)="image.show = true">/>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</swiper>
+
+<router-outlet></router-outlet>
+
+
